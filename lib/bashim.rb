@@ -6,7 +6,7 @@ require 'iconv'
 module Bashim
 	def random
 		html = Net::HTTP.get('bash.im', '/random')
-		html = html.encode Encoding::UTF_8, :undef => :replace
+		html.encode!('UTF-8', 'CP1251', :invalid => :replace, :replace => '')
 		text = /\<div class=\"text\"\>.*?\<\/div\>/.match(html)
 		cit = text.to_s
 		cit.gsub!(/\<br.*?\>/,"\n")
