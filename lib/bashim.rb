@@ -13,8 +13,6 @@ module Bashim
 		cit.gsub!(/&quot;/,"\"")
 		cit.gsub!(/&lt;/,"<")
 		cit.gsub!(/&gt;/,">")
-		puts "\033[33m"
-		puts cit.gsub(/\<.+?\>/,"")
-		puts "\033[37m"
+		return cit.gsub(/\<.+?\>/,"")
 	end
 end

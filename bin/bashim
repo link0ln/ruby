@@ -4,4 +4,4 @@
 require 'bashim'
 
 include Bashim
-Bashim::random
+puts Bashim::random
