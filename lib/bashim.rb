@@ -1,7 +1,6 @@
 # encoding: utf-8
 require "bashim/version"
 require 'net/http'
-require 'iconv'
 
 module Bashim
 	def random
